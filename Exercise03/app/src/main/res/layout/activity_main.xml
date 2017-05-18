@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.anas.exercise03.MainActivity"
+    android:background="@color/DarkRed"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/layoutSeekBar"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:id="@+id/tvSampleRate"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" android:textColor="@color/White"
+            android:layout_marginRight="10dp"/>
+        <SeekBar
+            android:id="@+id/seekbarACC"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/text_style"
+            android:max="200"
+            android:progress="100"
+            />
+    </LinearLayout>
+
+    <com.example.anas.exercise03.AccelView
+
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:id="@+id/accView"
+        android:layout_below="@+id/layoutSeekBar"
+        android:background="#bbbbbb"
+        android:padding="25dp"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutSeekBar2"
+        android:layout_below="@+id/accView"
+        android:layout_margin="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="window Size:"
+            android:id="@+id/tvWinsize"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+        <SeekBar
+            android:id="@+id/seekbarFFT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:max="10"
+            android:progress="5"
+            />
+
+    </LinearLayout>
+
+    <com.robinhood.spark.SparkView
+        android:id="@+id/sparkview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/layoutSeekBar2"/>
+
+
+</RelativeLayout>
